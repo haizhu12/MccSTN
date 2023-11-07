@@ -6,7 +6,7 @@
 
 Stylistic transformation of artistic images is an important part of the current image processing field. In order to access the aesthetic-artistic expression of style images, recent research has applied attention mechanisms to the field of style transfer. This approach transforms stylised images into tokens by calculating attention and then migrates the artistic style of the image through a decoder. However, due to the very low semantic similarity between the original image and the style image, this results in many fine-grained style features being discarded. This can lead to discordant artefacts or obvious artefacts. To address this problem, we propose MccSTN, a novel style representation and transfer framework that can be adapted to existing arbitrary image style transfers. Specifically, we first introduce a feature fusion module (Mccformer) to fuse aesthetic features in style images with fine-grained features in content images. Feature maps are obtained through Mccformer. The feature map is then fed into the decoder to get the image we want. In order to lighten the model and train it quickly, we consider the relationship between specific styles and the overall style distribution. We introduce a multi-scale augmented contrast module that learns style representations from a large number of image pairs. Comparative experiments show that our approach outperforms the state-of-the-art existing work.
 
-### An overview of our Saiency-aware Noise Blending.
+### An overview of our methods.
 
 ![main](https://github.com/haizhu12/MccSTN/assets/93024130/8b1b1dcd-b83f-4439-9441-a6818509235d)
 
@@ -23,6 +23,7 @@ To set up their environment, please run:
 ```
 python=3.8
 pytorch=1.9.1
+cuda=11.3
 ```
 
 Clone this repo:
@@ -33,6 +34,7 @@ cd MccSTN
 or other packages that are reminded to be installed.
 
 #### Models
+
 **Test:**
 - Download the pre-trained [vgg_normalised.pth](https://drive.google.com/file/d/1PUXro9eqHpPs_JwmVe47xY692N3-G9MD/view?usp=sharing), place it at path `models/`.
 
